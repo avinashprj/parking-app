@@ -1,0 +1,102 @@
+.App {
+  max-width: 120rem;
+  width: 100%;
+  background-color: white;
+  min-height: 90vh;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.container {
+  margin: 2rem;
+}
+
+.input-container {
+  height: 100%;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.input-textfield {
+  position: relative;
+}
+
+.input-label {
+  position: absolute;
+  font-size: 1.6rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: gray;
+  padding: 0 0.48rem;
+  margin: 0 0.8rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+.input {
+  font-size: 1.5rem;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding: 1rem 0.6rem;
+  color: black;
+  transition: 0.1s ease-out;
+  margin: 1rem 0;
+}
+.input.success:focus {
+  border-color: #6200ee;
+}
+.input.error:focus .error {
+  border-color: red;
+}
+.input:focus + .input-label.success {
+  color: #6200ee;
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+.input:focus + .input-label.error {
+  color: red;
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+.input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+.button {
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.add-button {
+  background-color: white;
+  color: black;
+  border: 1px solid #6200ee;
+}
+
+.add-button:hover {
+  background-color: #6200ee;
+  color: white;
+}
+
+.button:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: no-drop;
+}
+.button:disabled:hover {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
